@@ -19,7 +19,7 @@ import spacySimilarityV2 as simi
 **Como usar a função**
 Você deve passar duas listas que contém listas de palavras, quanto mais palavras melhor o resultado
 
-##EXEMPLO
+## EXEMPLO
 
 list1 = [['car', 'truck', 'seat'], ['home', 'floor', 'stairs'], ['school', 'book', 'pencil']]
 
@@ -45,11 +45,13 @@ pegando o terceiro indice, [2, 2, 0.04]
 
 significa que a lista list1[2] teve similaridade de 0.04 com list2[2]
 
+_Quanto mais próximo de zero mais fraca é a similaridade e quanto maior que zero mais forte é a similaridade_
+
 # Parametros
 
-**rank_matters**: leva em consideração a posição da palavra para calcular a similaridade
+**rank_matters**: leva em consideração a posição da palavra para calcular a similaridade. _boolean_ (True ou False)
 
-**absolute_value**: a função original do spacy em alguns casos retorna similaridade negativa, com isso, caso o valor seja **True**, valores negativos passarão a ser considerados em seu valor positivo
+**absolute_value**: a função original do spacy em alguns casos retorna similaridade negativa, com isso, caso o valor seja **True**, valores negativos passarão a ser considerados em seu valor positivo. _boolean_ (True ou False)
 
 
 
