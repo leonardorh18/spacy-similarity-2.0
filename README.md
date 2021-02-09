@@ -49,7 +49,7 @@ _Quanto mais próximo de zero mais fraca é a similaridade e quanto maior que ze
 
 # Parametros
 
-spacy_simi(list1, list2, nlp, rank_matters = True, absolute_value = True)
+simi.spacy_simi(list1, list2, nlp, rank_matters = True, absolute_value = True)
 
 **list1** = lista que voce quer comparar
 
