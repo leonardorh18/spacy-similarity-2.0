@@ -27,21 +27,21 @@ list2 = [['bike', 'gas', 'seat'], ['room', 'toilet', 'bed'], ['teacher', 'read',
 
 result = simi.spacy_simi(list1, list2, nlp, rank_matters = True, absolute_value = True)
 
-_Seguindo a ordem,a função vai comparar a similaridade da primeira lista com da segunda e vai retornar uma lista com o indice correspondente da lista mais similar_
+**Seguindo a ordem, a função vai comparar a similaridade da primeira lista com da segunda e vai retornar uma lista com o indice correspondente das listas mais similares**
 
 **Por exemplo (valores ficticios)**
 
-Supondo que você passou duas listas para a função (list1 e list2) a função retorna uma lista (matriz) como essa [[0,1,0.05],[1, 1, 0.03],[2, 2, 0.04]]
+Supondo que você passou duas listas para a função (list1 e list2, respectivamente) a função retorna uma lista (matriz) como essa [[0,1,0.05], [1, 1, 0.03], [2, 2, 0.04]]
 
-pegando o primeiro indice, [0, 1, 0.05]
+_pegando o primeiro indice, [0, 1, 0.05]_
 
 usando o exemplo, significa que a lista list1[0] teve similaridade de 0.05 com list2[1]
 
-pegando o segundo indice, [1, 1, 0.03]
+_pegando o segundo indice, [1, 1, 0.03]_
 
 significa que a lista list1[1] teve similaridade de 0.03 com list2[1]
 
-pegando o terceiro indice, [2, 2, 0.04]
+_pegando o terceiro indice, [2, 2, 0.04]_
 
 significa que a lista list1[2] teve similaridade de 0.04 com list2[2]
 
