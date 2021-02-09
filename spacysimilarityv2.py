@@ -115,23 +115,6 @@ def spacy_simi(topicost1, topicost2, nlp, rank_matters = False, absolute_value =
       medias.append([topico1, melhor_topico, maior_media])
   return medias
 
-## transforma o topico estraido do csv em uma lista de palavras
-def process(docs):
-  n_final = []
-  for s in docs:
-    n_final.append(["".join([w for w in s if w != '[' and w != ']' and w != ')' and w != '(' and w != "'" and w != " " ])])
-  final = []
-  for doc in n_final:
-    aux = []
-    for s in doc:
-      #print(s)
-      if (type(s) is float) == False: ## comparando pra ver se nao é NaN
-        splt = s.split(",")
-        for word in splt:
-          # print(word)
-          aux.append(word)
-      final.append(aux)
-  return final
 
 """## 2 tecnica"""
 
