@@ -63,7 +63,7 @@ spacy_simi(list1, list2, nlp, rank_matters = True, absolute_value = True)
 
 
 
-![image](https://github.com/leonardorh18/spacy-similarity-2.0/tree/main/image/exemplo.png?raw=True)
+![plot](image/exemplo.png)
 
 
 
