@@ -18,7 +18,9 @@ import spacySimilarityV2 as simi
 
 **Como usar a função**
 Você deve passar duas listas que contém listas de palavras, quanto mais palavras melhor o resultado
+
 ##EXEMPLO
+
 list1 = [['car', 'truck', 'seat'], ['home', 'floor', 'stairs'], ['school', 'book', 'pencil']]
 
 list2 = [['bike', 'gas', 'seat'], ['room', 'toilet', 'bed'], ['teacher', 'read','university']]
