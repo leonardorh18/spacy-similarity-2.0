@@ -49,9 +49,21 @@ _Quanto mais próximo de zero mais fraca é a similaridade e quanto maior que ze
 
 # Parametros
 
+spacy_simi(list1, list2, nlp, rank_matters = True, absolute_value = True)
+
+**list1** = lista que voce quer comparar
+
+**list2** = lista a ser comparada
+
+**nlp** = pacote NLP carregado a partir da função spacy.load()
+
 **rank_matters**: leva em consideração a posição da palavra para calcular a similaridade. _boolean_ (True ou False)
 
 **absolute_value**: a função original do spacy em alguns casos retorna similaridade negativa, com isso, caso o valor seja **True**, valores negativos passarão a ser considerados em seu valor positivo. _boolean_ (True ou False)
+
+
+
+![alt text](github.com/leonardorh18/spacy-similarity-2.0/tree/main/image/exemplo.png)
 
 
 
