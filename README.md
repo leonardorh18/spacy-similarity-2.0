@@ -14,56 +14,37 @@ nlp = spacy.load('en_core_web_lg')
 
 **Faça a importação desse arquivo .py**
 
-import spacySimilarityV2 as simi
+from spacysimilarity import SpacySimilarity 
 
-**Como usar a função**
-Você deve passar duas listas que contém listas de palavras, quanto mais palavras melhor o resultado
+**Como usar**
 
-## EXEMPLO
-
-list1 = [['car', 'truck', 'seat'], ['home', 'floor', 'stairs'], ['school', 'book', 'pencil']]
-
-list2 = [['bike', 'gas', 'seat'], ['room', 'toilet', 'bed'], ['teacher', 'read','university']]
-
-result = simi.spacy_simi(list1, list2, nlp, rank_matters = True, absolute_value = True)
-
-**Seguindo a ordem, a função vai comparar a similaridade da primeira lista com da segunda e vai retornar uma lista com o indice correspondente das listas mais similares**
-
-**Por exemplo (valores ficticios)**
-
-Supondo que você passou duas listas para a função (list1 e list2, respectivamente) a função retorna uma lista (matriz) como essa [[0,1,0.05], [1, 1, 0.03], [2, 2, 0.04]]
-
-_pegando o primeiro indice, [0, 1, 0.05]_
-
-usando o exemplo, significa que a lista list1[0] teve similaridade de 0.05 com list2[1]
-
-_pegando o segundo indice, [1, 1, 0.03]_
-
-significa que a lista list1[1] teve similaridade de 0.03 com list2[1]
-
-_pegando o terceiro indice, [2, 2, 0.04]_
-
-significa que a lista list1[2] teve similaridade de 0.04 com list2[2]
-
-_Quanto mais próximo de zero mais fraca é a similaridade e quanto maior que zero mais forte é a similaridade_
-
-# Parametros
-
-simi.spacy_simi(list1, list2, nlp, rank_matters = True, absolute_value = True)
-
-**list1** = lista que voce quer comparar
-
-**list2** = lista a ser comparada
-
-**nlp** = pacote NLP carregado a partir da função spacy.load()
-
-**rank_matters**: leva em consideração a posição da palavra para calcular a similaridade. _boolean_ (True ou False)
-
-**absolute_value**: a função original do spacy em alguns casos retorna similaridade negativa, com isso, caso o valor seja **True**, valores negativos passarão a ser considerados em seu valor positivo. _boolean_ (True ou False)
+simi = SpacySimilarity(nlp)
 
 
+simi.spacy_simi(lista1, lista1, probLista1, probLista2, include_prob = True, rank_matters = True)
 
-![plot](https://github.com/leonardorh18/spacy-similarity-2.0/blob/main/image/exemplo.PNG?raw=true)
+**Por padrão, probLista1 e probLista2 são dicionarios vazios, caso queira incluir a probabilidade das palavras basta usar o metodo make_dict() para criar dicionario com a palavra
+e a probabilidade:**
+
+list1 = (lista com listas que contem palavras)
+
+list2 = (lista com lsitas que contem palavras)
+
+prob1 = (lista com listas que contem a probabilidade das palavras da list1, respectivamente)
+
+prob2 = (lista com listas que contem a probabilidade das palavras da list2, respectivamente)
+
+probLista1 = simi.make_dict(list1, prob1)
+
+probLista2 = simi.make_dict(list2, prob2)
+
+o parametro include_prob deve ser True para incluir as probabilidades
+
+o metodo spacy_simi() retorna uma matriz Nx3 onde N é a quantidade de tópicos da primeira lista (list1)
+
+[topico lista1, melhor "match" topico lista2, valor]
+
+
 
 
 
